@@ -1,0 +1,8 @@
+auto: true
+markdown: rdiscount
+
+title: Sbloger.com
+home_link: http://sbloger.com/
+about_link: "<a href=\"http://sbloger.com/\">Sirius</a>"
+copyright:
+    - Design by <a href="http://beiyuu.com/about" title="BeiYuu" target="_blank">BeiYuu</a> &copy; 2013
