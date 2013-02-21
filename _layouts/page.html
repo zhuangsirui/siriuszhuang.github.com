@@ -8,7 +8,7 @@ layout:           default
     <div id="header">
         <div class="nav right">
             {% for category in site.categories %}
-            <a href="{{ category[0] }}" title="{{ category[0] }}">{{ category[0] }}</a>
+            <a href="/{{ category[0] }}" title="{{ category[0] }}">{{ category[0] }}</a>
             {% endfor %}
             <!--<a href="/" title="Thoughts On Something">Blog</a>-->
             <!--<a href="/project" title="Projects Ongoing">Project</a>-->
