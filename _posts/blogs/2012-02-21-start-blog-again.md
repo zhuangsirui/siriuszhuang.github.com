@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Start blog again
-description: Why I write a blog again?
+description: Geting started!
 category: blog
 ---
 
