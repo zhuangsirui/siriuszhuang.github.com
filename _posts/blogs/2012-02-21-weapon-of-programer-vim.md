@@ -78,7 +78,21 @@ VIM的插件有不少，大家可以在[VIM](http://www.vim.org/scripts/index.ph
 
 	call vundle#rc()
 
-	Bundle 'gmarik/vundle'
+	Bundle 'gmarik/vundle' " 必填项 让Vundle自己更新自己"
+
+	" 添加自己喜欢的插件 {"
+
+		" 直接填写名称的插件，Vundle会在vim-script.org中寻找对应的插件"
+		Bundle 'ZenCoding.vim'
+		Bundle 'The-NERD-tree'
+
+		" 对于这种AA/BB格式的插件，Vundle自动会去Github中找AA用户的BB仓库"
+		Bundle 'tpope/vim-rails'
+
+		" 对于其他Git地址，则需要填写完整路径"
+		Bundle 'git://git.wincent.com/command-t.git'
+
+	" }"
 
 	filetype plugin indent on
 
@@ -87,3 +101,14 @@ VIM的插件有不少，大家可以在[VIM](http://www.vim.org/scripts/index.ph
 	mkdir ./bundle/vundle
 
 	git clone https://github.com/gmarik/vundle.git ./bundle/vundle
+
+再运行VIM，执行`:BundleInstall`安装自己配置的其他插件。就这么简单。以后，只需要
+维护一个`.vimrc`便可以让自己的VIM不断更新，随着自己一起成长。太棒了不是吗？
+
+## 我的VIM配置
+
+如果大家嫌还是太麻烦了，可以直接使用我的
+[VIM配置](https://github.com/siriuszhuang/vim.git)，或者任意修改调戏不客气！
+
+对于刚开始使用VIM的人来说，一定要坚持，当你习惯了VIM之后，会发现已经对这种操作爱
+不释手了。
