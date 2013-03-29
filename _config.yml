@@ -2,6 +2,9 @@ auto: true
 markdown: rdiscount
 
 title: Sbloger.com
+name: Sbloger
+description:
+    - 一个程序员的个人博客
 home_link: http://sbloger.com/
 about_link: "<a href=\"http://sbloger.com/\">Sirius</a>"
 copyright:
