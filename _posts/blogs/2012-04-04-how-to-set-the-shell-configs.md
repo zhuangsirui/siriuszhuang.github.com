@@ -46,7 +46,7 @@ category: blog
 
 ### ~/.profile
 
-> 用来载入需要的环境变量，rvm、以及自己home目录中的命令等等
+> 用来载入需要的环境变量，rvm、以及自己home目录中bin目录等等
 
 	# Load RVM into a shell session *as a function*
 	[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -86,18 +86,18 @@ category: blog
 
 ## 关于ZSH
 
-其实，进来一直都用的zsh替代bash，原因是一个叫*oh my zsh*的shell配置用着实在爽，但是zsh的加载流程貌似又和bash不太一样。为了让zsh继承bash的配置又不像DRY（don't repeat yourself）。好在zsh是完全兼容bash的。于是在`~/.zshrc`以及`~/.zprofile`中添加了几行好让zsh继承bash的配置。
+其实，进来一直都用的zsh替代bash，原因是一个叫*oh my zsh*的shell配置用着实在爽，但是zsh的加载流程貌似又和bash不太一样。为了让zsh继承bash的配置又不想DRY（don't repeat yourself）。好在zsh是完全兼容bash的。于是在`~/.zshrc`以及`~/.zprofile`中添加了几行好让zsh继承bash的配置。
 
-### .zprofile
+### ~/.zprofile
 
-> 这个是zsh在login shell会调用的文件，让他继承`~/.bash_profile`就是了。
+> 这个是zsh在login shell会调用的文件，让他“继承”`~/.bash_profile`就是了。
 
 	# Load bash profile
 	[[ -f "$HOME/.bash_profile" ]] && source "$HOME/.bash_profile"
 
-### .zshrc
+### ~/.zshrc
 
-> 这个是zsh在non-login shell会加载的文件，其实和bash是差不多的。同样的，在它的最后一行让他“继承”`~/.bashrc`就好了。
+> 这个是zsh在non-login shell会加载的文件，其实和bash是差不多。同样的，在它的最后一行让他“继承”`~/.bashrc`就好了。
 
 	[[ -r "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
 
