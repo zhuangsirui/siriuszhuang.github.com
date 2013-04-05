@@ -100,5 +100,6 @@ category: blog
 > 这个是zsh在non-login shell会加载的文件，其实和bash是差不多的。同样的，在它的最后一行让他“继承”`~/.bashrc`就好了。
 
 	[[ -r "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
+
 	# reload non-login shell env
 	alias reload="source $HOME/.zshrc"
