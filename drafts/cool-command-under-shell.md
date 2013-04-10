@@ -27,3 +27,15 @@
 	Length: 10310 (10K) [text/html]
 	Remote file exists and could contain further links,
 	but recursion is disabled -- not retrieving.
+
+### 删除文件到垃圾箱（$HOME/lost+found/）
+
+很多时候，在命令模式下删除文件是一件危险的事情，直接`rm`的话，对于误删除就没办法了，将下面一行脚本放入`~/.bashrc`中，通过`del`来删除文件，可以自动将文件或者目录移动到`$HOME/lost+found/`文件夹下。
+
+	# delete file or directory to ~/lost+found {{{
+	function del () {
+		trashDir="${HOME}/lost+found/"
+		[[ -d ${trashDir} ]] || mkdir ${trashDir}
+		mv $1 ${trashDir}
+	}
+	# }}}
