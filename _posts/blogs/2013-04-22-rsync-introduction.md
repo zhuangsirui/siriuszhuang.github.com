@@ -1,4 +1,9 @@
-# Rsync
+---
+layout: post
+title: rsync使用入门
+description: 强大的远程差异化对比同步工具，你值得拥有！
+category: blog
+---
 
 ## Rsync简介
 Rsync 是一个和服务器端同步数据的软件，它可以差异化的同步一整个目录树中的文本文件和二进制文件，并且即使是二进制文件也都是差异化同步的。[这里](https://zh.wikipedia.org/zh-cn/Rsync)是Rsync的简介，大家感兴趣的不妨看一看。另外，[这里](https://zh.wikipedia.org/wiki/Rsync#.E6.BC.94.E7.AE.97.E6.B3.95)直接阅读其差异化同步文件算法的文章，相信看了之后会对大家的算法提升有帮助的。
