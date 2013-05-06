@@ -31,3 +31,18 @@ Example
 		mv $1 ${trashDir}
 	}
 	# }}}
+
+### 修改文件名
+
+很多时候，我们只希望修改文件的后缀，如果文件名称很长，或者在一个很深的目录的话，就会出现这样的情况：
+
+	mv ~/path/to/my/self/file.php ~/path/to/my/self/file.rb
+
+其实，只用加上`{}`，就可以方便的重命名了：
+
+	mv ~/path/to/my/self/file.{php,rb}    # 修改后缀
+	mv ~/path/to/my/self/{file,file2}.php # 修改文件名
+
+### 只查看当前目录中的目录
+
+	ls -d */
