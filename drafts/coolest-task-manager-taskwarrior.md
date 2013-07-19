@@ -24,13 +24,15 @@
 	$ task add Buy a vps!
 	$ task list
 
-### Add a task to a project
+### Basic manage the tasks
 
 	$ task add project:company Fix a bug
 	$ task add proj:company Fix a bug
 	$ task add pro:company Fix a bug
-	# sub project
 	$ task add project:company.server Fix a bug
 	$ task project:company.server list
 	$ task add project:company.client Fix a bug
 	$ task project:company.client list
+	$ task 1 edit
+	$ task 1 done
+	$ task 1 delete
