@@ -36,3 +36,7 @@
 	$ task 1 edit
 	$ task 1 done
 	$ task 1 delete
+
+### Advance
+
+	$ task add project:Home priority:H Find the adjustable wrench
