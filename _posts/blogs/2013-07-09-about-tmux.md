@@ -72,3 +72,7 @@ tmux的配置文件是放在`$HOME`目录下面的，文件名是`.tmux.conf`。
 `ps aux | grep tmux`可以看到有一个孤儿进程attach了tmux会话的，可能是因为我不小心
 在使用iterm的时候直接关掉了他而不是退出，这样做attach的进程不会因此而中断。所以
 只需要kill掉那个进程就ok了（**千万注意不要杀掉tmux的会话进程**）。
+
+另外一种方法是直接用Tmux的命令detach掉链接进程
+
+	tmux detach-client -t /dev/ttys000
