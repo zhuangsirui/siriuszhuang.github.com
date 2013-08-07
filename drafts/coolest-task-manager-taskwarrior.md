@@ -15,14 +15,16 @@
 
 ### Mac
 
-### Other
-
-## Usage
+## Basic usage
 
 ### Add a task
 
 	$ task add Buy a vps!
 	$ task list
+
+### Delete a task
+
+### Finish a task
 
 ### Basic manage the tasks
 
@@ -37,6 +39,73 @@
 	$ task 1 done
 	$ task 1 delete
 
-### Advance
+## Advance usage
 
+### priority
+
+	$ # Priority values may be 'H', 'M' or 'L'
 	$ task add project:Home priority:H Find the adjustable wrench
+	$ task
+	ID Proj   Pri Age Urg  Description
+	 2 diyBag M   6d  4.93 Buy tools for logo.
+	 1 diyBag     10d 1.05 Buy the stuff to make the bag holder.
+	$ task 2 modity priority:H
+	[task next 2 modity priority:H]
+	No matches.
+	$ task 2
+	ID Proj   Pri Age Urg  Description
+	 2 diyBag M   6d  4.93 Buy tools for logo.
+	$ task 2 modify pri:L
+	Modifying task 2 'Buy tools for logo.'.
+	Modified 1 task.
+	$ task 2
+	ID Proj   Pri Age Urg  Description
+	 2 diyBag L   6d  2.83 Buy tools for logo.
+	$ task pri.below:H
+	$ task pri.over:H
+	$ task pri.not:M
+
+### due
+
+	$ task add This is an urgent task due:tomorrow
+	$ task due:tomorrow
+	$ task due.before:today
+	$ task list due.before:7d
+	$ task 2 modify due: # 删除任务的到期日期
+	$ task overdue
+
+### annotate/denotate
+
+	$ task 2 annotate This is an annotate.
+	$ task 2 annotate This is another annotate.
+	$ task 2 denotate annotate
+
+### tags
+
+	$ task 2 +mail
+	$ task +mail list
+	$ task 2 -mail
+
+### prepend,append
+
+	$ task add music
+	$ task 8 prepend Select some
+	$ task 8 append for after dinner
+	$ task dinner list
+
+	ID Project Pri Due Active Age     Description
+	-- ------- --- --- ------ ------- ----------------------------------
+	 8                        34 secs Select some Music for after dinner
+
+### recur,until
+
+	$ task 1 modify due:eom recur:monthly
+	$ task 2 modify due:eom recur:yearly
+	$ task 3 modify due:eom recur:monthly until:eoy
+	$ task recurring
+
+## Query advance
+
+### Limit
+
+	$ task limit:1
