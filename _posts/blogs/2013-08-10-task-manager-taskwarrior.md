@@ -136,22 +136,32 @@ Taskwarrior允许设置任务的优先级。分别有`L`(Low)，`M`(Middle)和`H
 
 * `due`过滤器的使用方法
 
-		$ task due:tomorrow
-		$ task due.before:today
-		$ task list due.before:7d
-		$ task overdue
+		$ task due:tomorrow # 明天截止的任务
+		$ task due:eom # 当月月末截止的任务
+		$ task due.before:today # 今天之前截止的任务
+		$ task overdue # 已过期的任务
 
-### annotate/denotate
+### 注释（annotate/denotate）
 
-	$ task 2 annotate This is an annotate.
-	$ task 2 annotate This is another annotate.
-	$ task 2 denotate annotate
+	$ task add Create a blog.
+	$ task 1 annotate I need a linux server
+	$ task 1 annotate I gotta learn php
+	$ task 1
+	[task next 1]
 
-### tags
+	ID Project Pri Due A Age Urgency Description
+	 1                   15s     0.9 Create a blog.
+	                                 8/8/2013 I need a linux server
+	                                 8/8/2013 I gotta learn php
 
-	$ task 2 +mail
-	$ task +mail list
-	$ task 2 -mail
+	1 task
+
+### 标签
+
+	$ task add Create a blog.
+	$ task 1 modify +blog # 为任务添加标签
+	$ task +blog list # 标签过滤器
+	$ task 1 modify -blog # 删除任务的某一个标签
 
 ### prepend,append
 
@@ -180,3 +190,8 @@ Taskwarrior允许设置任务的优先级。分别有`L`(Low)，`M`(Middle)和`H
 ### ext
 
 	$ task description.has:foo list
+
+## More
+
+	$ man task-tutorial
+	$ man task
