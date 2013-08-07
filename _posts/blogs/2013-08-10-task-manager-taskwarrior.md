@@ -1,3 +1,10 @@
+---
+layout: post
+title: 任务管理工具Taskwarrior
+description: 任务管理工具Taskwarrior
+category: blog
+---
+
 ## 什么是Taskwarrior
 
 [Taskwarrior](http://taskwarrior.org/)是一个终端下的任务管理工具，功能及其强大。
