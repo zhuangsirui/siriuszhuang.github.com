@@ -19,25 +19,67 @@
 
 ### Add a task
 
+添加一个任务很简单，直接`task add`后面跟上任务的描述就可以了。
+
 	$ task add Buy a vps!
 	$ task list
 
+	ID Project Pri Due Active Age Description
+	 1                         3s Buy a vps!
+
+	1 task
+
 ### Delete a task
+
+删除一个任务，需要做的是运行`task <filter> delete`。这里的`<filter>`暂时可以简单
+的看做这个任务的ID，后面会详细介绍`<filter>`的用法。:)
+
+	$ task
+	[task next]
+
+	ID Project Pri Due A Age Urgency Description
+	 1                   29s       0 Buy a vps!
+
+	1 task
+	$ task 1 delete
+	Permanently delete task 1 'Buy a vps!'? (yes/no) yes
+	Deleting task 1 'Buy a vps!'.
+	Deleted 1 task.
 
 ### Finish a task
 
-### Basic manage the tasks
+完成一个任务和删除一个任务很相似，运行`task <filter> done`。
 
-	$ task add project:company Fix a bug
-	$ task add proj:company Fix a bug
-	$ task add pro:company Fix a bug
-	$ task add project:company.server Fix a bug
+	$ task add Buy a vps!
+	Created task 2.
+	$ task
+	[task next]
+
+	ID Project Pri Due A Age Urgency Description
+	 1                    1s       0 Buy a vps!
+
+	1 task
+	$ task 1 done
+	Completed task 1 'Buy a vps!'.
+	Completed 1 task.
+
+### Basic manage the tasks' project
+
+Taskwarrior的功能很强大，可以简单的为每个任务创建一个隶属的项目。可以有很多种方
+法创建或修改任务隶属的项目组。
+
+1. 可以在添加任务的同时指定任务所隶属的项目
+
+      $ task add project:company Fix a bug
+      $ task add proj:company Fix a bug
+      $ task add pro:company Fix a bug
+      $ task add project:company.server Fix a bug
+
+2. qwe
+
 	$ task project:company.server list
 	$ task add project:company.client Fix a bug
 	$ task project:company.client list
-	$ task 1 edit
-	$ task 1 done
-	$ task 1 delete
 
 ## Advance usage
 
