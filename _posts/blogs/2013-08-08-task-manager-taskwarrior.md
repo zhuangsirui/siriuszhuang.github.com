@@ -192,6 +192,8 @@ Taskwarrior允许设置任务的优先级。分别有`L`(Low)，`M`(Middle)和`H
 
 关于这个命令，我就不放运行结果了，反正是相当的惊艳。好了，再见吧，少年们！
 
+![Taskwarrior](/images/task.jpg)
+
 ## More
 
 本来还想写一点高级`<filter>`和高级查询相关的命令。但是我觉得相对于强大的
