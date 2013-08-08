@@ -101,7 +101,7 @@ Taskwarrior的功能很强大，可以简单的为每个任务创建一个隶属
 
 ## 高级用法
 
-### 优先级
+### 优先级（priority）
 
 Taskwarrior允许设置任务的优先级。分别有`L`(Low)，`M`(Middle)和`H`(High)三个级别
 。
@@ -119,7 +119,7 @@ Taskwarrior允许设置任务的优先级。分别有`L`(Low)，`M`(Middle)和`H
 		$ task pri.over:L # Low等级以上的任务
 		$ task pri.not:M # 不是Middle等级的其他所有任务
 
-### 截止日期
+### 截止日期（due）
 
 既然是任务管理，没有截止日期还能算强大么？所以，理所当然的，Taskwarrior的`due`就
 应运而生了（其实我一点儿都不觉得理所当然，时时刻刻感谢Taskwarrior开发者们的良苦
@@ -163,35 +163,40 @@ Taskwarrior允许设置任务的优先级。分别有`L`(Low)，`M`(Middle)和`H
 	$ task +blog list # 标签过滤器
 	$ task 1 modify -blog # 删除任务的某一个标签
 
-### prepend,append
+### 追加（prepend/append）
+
+有时候，想要给任务追加一些描述，但是又不想重新把任务的描述打一次的话，可以使用
+`prepend`和`append`功能。
 
 	$ task add music
-	$ task 8 prepend Select some
-	$ task 8 append for after dinner
-	$ task dinner list
+	$ task 1 prepend Download some
+	$ task 1 append into my iPod
+	$ task 1
+	[task next 1]
 
-	ID Project Pri Due Active Age     Description
-	-- ------- --- --- ------ ------- ----------------------------------
-	 8                        34 secs Select some Music for after dinner
+	ID Project Pri Due A Age Urgency Description
+	 1                   13s       0 Download some music into my iPod
 
-### recur,until
+	1 task
+
+### 重复任务（recur/until）
 
 	$ task 1 modify due:eom recur:monthly
 	$ task 2 modify due:eom recur:yearly
 	$ task 3 modify due:eom recur:monthly until:eoy
 	$ task recurring
 
-## Query advance
+### 日历（cal）
 
-### Limit
+	$ task cal
 
-	$ task limit:1
-
-### ext
-
-	$ task description.has:foo list
+关于这个命令，我就不放运行结果了，反正是相当的惊艳。好了，再见吧，少年们！
 
 ## More
 
-	$ man task-tutorial
+本来还想写一点高级`<filter>`和高级查询相关的命令。但是我觉得相对于强大的
+Taskwarrior，再多的解释都是冰山一角。如果想了解更多，就看手册吧。写的相当详尽可
+靠。
+
 	$ man task
+	$ man task-tutorial
