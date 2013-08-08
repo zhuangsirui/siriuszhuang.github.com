@@ -97,7 +97,7 @@ Taskwarrior的功能很强大，可以简单的为每个任务创建一个隶属
 
 * 删除任务的隶属项目
 
-		$ task 1 proj:
+		$ task 1 modify proj:
 
 ## 高级用法
 
