@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 任务管理工具Taskwarrior
-description: 任务管理工具Taskwarrior
+description: 便捷的任务管理器，媲美GoogleCal。
 category: blog
 ---
 
