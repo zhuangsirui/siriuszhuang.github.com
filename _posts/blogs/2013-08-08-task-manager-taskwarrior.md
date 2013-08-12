@@ -16,6 +16,11 @@ category: blog
 > features, device synching, documentation, extensions, themes, holiday files
 > and much more.
 
+> 它维护一个任务列表，允许你针对你的任务列表进行添加、移除或者一些其他的操作。任
+> 务有丰富的子命令设定，允许你进行精准复杂的控制。并且你会发现它拥有可制定的报
+> 告，报表，时间管理，设备同步，文档，扩展，主题，假期文件（译注：一个假期时间
+> 表配置，针对不同的国家与区域）以及更多。
+
 ## 安装
 
 ### Ubuntu
