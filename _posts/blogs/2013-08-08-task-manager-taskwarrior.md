@@ -7,8 +7,8 @@ category: blog
 
 ## 什么是Taskwarrior
 
-[Taskwarrior](http://taskwarrior.org/)是一个终端下的任务管理工具，功能及其强大。
-具体信息在它的官方网站上面已经介绍的很相近了。下面就列一段概述：
+[Taskwarrior](http://taskwarrior.org/)是一个终端下的任务管理工具，功能极其强大。
+具体信息在它的官方网站上面已经介绍的很详尽了。下面就列一段概述：
 
 > It maintains a task list, allowing you to add/remove, and otherwise manipulate
 > your tasks. Task has a rich set of subcommands that allow you to do
